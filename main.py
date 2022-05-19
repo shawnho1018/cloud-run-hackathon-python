@@ -32,13 +32,15 @@ def index():
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
+    #logger.info(request.json)
+    data = request.json
     self = 'https://watersplash-ya6rumdz4a-uc.a.run.app'
     dimension = data['arena']['dims']
     mydir = data['arena']['state'][self].direction
     mycor = [data['arena']['state'][self].x, data['arena']['state'][self].y]
     result = moveTo(dimension[0], dimension[1], mydir, mycor[0], mycor[1])
 
-    logger.info(request.json)
+
     return result
     #return moves[random.randrange(len(moves))]
 
