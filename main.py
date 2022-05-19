@@ -32,7 +32,6 @@ def index():
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
-    info = json.loads(request.json)
     
     logger.info(request.json)
 
