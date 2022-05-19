@@ -15,6 +15,9 @@ mydir = data['arena']['state'][self]['direction']
 mycor = [data['arena']['state'][self]['x'], data['arena']['state'][self]['y']]
 
 
+def shouldshot(others, mydir, mycor):
+    if mydir = 'N'
+        
 
 # should fire
 for user in data['arena']['state']:
