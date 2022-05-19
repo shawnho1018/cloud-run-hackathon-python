@@ -42,7 +42,7 @@ def move():
     
     return result
     #return moves[random.randrange(len(moves))]
-def fire(mydir, )
+
 def moveTo(dst_x, dst_y, mydir, my_x, my_y):
     move = 'F'
     if my_y > dst_y:
