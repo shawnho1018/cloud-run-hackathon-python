@@ -32,10 +32,58 @@ def index():
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
-    
-    logger.info(request.json)
+    self = 'https://watersplash-ya6rumdz4a-uc.a.run.app'
+    dimension = data['arena']['dims']
+    mydir = data['arena']['state'][self].direction
+    mycor = [data['arena']['state'][self].x, data['arena']['state'][self].y]
+    result = moveTo(dimension[0], dimension[1], mydir, mycor[0], mycor[1])
 
-    return moves[random.randrange(len(moves))]
+    logger.info(request.json)
+    return result
+    #return moves[random.randrange(len(moves))]
+
+def moveTo(dst_x, dst_y, mydir, my_x, my_y):
+    move = 'None'
+    if my_y > dst_y:
+        if mydir == 'N':
+            move = 'T'
+        elif mydir == 'E':
+            move = 'L'
+        elif mydir == 'W':
+            move = 'R'
+        else:
+            move = 'L'
+    elif my_y < dst_y:
+        if mydir == 'N':
+            move = 'L'
+        elif mydir == 'E':
+            move = 'R'
+        elif mydir == 'W':
+            move = 'L'
+        else:
+            move = 'T'        
+    else:
+        if my_x > dst_x:
+            if mydir == 'N':
+                move = 'L'
+            elif mydir == 'E':
+                move = 'L'
+            elif mydir == 'W':
+                move = 'T'
+            elif mydir == 'S':
+                move = 'R'
+        elif my_x < dst_x:            
+            if mydir == 'N':
+                move = 'R'
+            elif mydir == 'E':
+                move = 'T'
+            elif mydir == 'W':
+                move = 'R'
+            elif mydir == 'S':
+                move = 'L'
+            
+    return move
+
 
 if __name__ == "__main__":
   app.run(debug=False,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))

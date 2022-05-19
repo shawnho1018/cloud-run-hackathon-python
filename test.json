@@ -1,0 +1,21 @@
+{
+    "_links": 
+    {
+        "self": 
+        {
+            "href":"https://watersplash-ya6rumdz4a-uc.a.run.app"
+        }
+    }, 
+    "arena": {
+        "dims": [7, 5], 
+        "state": 
+        {
+            "https://watersplash-ya6rumdz4a-uc.a.run.app": {"x": 6, "y": 4, "direction": "W", "wasHit": "False", "score": -33}, 
+            "https://cloud-run-hackathon-java-springboot-tw-ce-2zxld2553q-uc.a.run.app": {"x": 5, "y": 0, "direction": "S", "wasHit": "False", "score": -11}, 
+            "https://cloud-run-hackathon-go-ji22cluy4q-uc.a.run.app": {"x": 5, "y": 1, "direction": "E", "wasHit": "True", "score": -38}, 
+            "https://mybot-james-nzhbl23jea-uc.a.run.app": {"x": 5, "y": 4, "direction": "S", "wasHit": "False", "score": 21}, 
+            "https://cloud-run-hackathon-python-txm7l5koaq-uc.a.run.app": {"x": 2, "y": 1, "direction": "E", "wasHit": "False", "score": 49}, 
+            "https://cloudbowl-pw4kzbdacq-uc.a.run.app": {"x": 6, "y": 0, "direction": "N", "wasHit": "False", "score": 12}
+        }
+    }
+}
