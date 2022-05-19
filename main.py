@@ -35,6 +35,7 @@ def move():
     info = json.loads(request.json)
     print(info)
     logger.info(request.json)
+    
     return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
