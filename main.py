@@ -38,9 +38,9 @@ def move():
     dimension = data['arena']['dims']
     mydir = data['arena']['state'][self]['direction']
     mycor = [data['arena']['state'][self]['x'], data['arena']['state'][self]['y']]
-    #result = moveTo(dimension[0], dimension[1], mydir, mycor[0], mycor[1])
-    #return result
-    return moves[random.randrange(len(moves))]
+    result = moveTo(dimension[0], dimension[1], mydir, mycor[0], mycor[1])
+    return result
+    #return moves[random.randrange(len(moves))]
 
 def moveTo(dst_x, dst_y, mydir, my_x, my_y):
     move = 'F'
